@@ -1,25 +1,17 @@
 #Sparda
+#this copies files from any usb drive and places them in the directory chosen
 
 #import date
 $todaysDate = Get-Date -format yyyyMMdd
-#define folder for loot
-$destinationFolder = "C:\Users\Sparda\Documents\loot\$todaysDate"
+
 #define external device
-$mydrive=(GWmi Win32_LogicalDisk | ?{$_.Bustype -Eq "USB"})
+$mydrive=GWmi Win32_Logicaldisk | ?{$_.Bustype -Eq "USB"}
+
+#define folder for loot
+$destinationFolder = "C:\Users\$env:Username\Documents\loot\$todaysDate"
+
 #create storage location
 if (!(Test-Path -path $destinationFolder)) {New-Item $destinationFolder -Type Directory}
-#find external device and copy desired data 
-Get-ChildItem -Path $mydrive-Recurse-Include"*.jpg"'*.jpeg'"*.png"| Copy-Item -Destination $destinationFolder -verbose
 
-
-the results are 
-----------------------------------------------------------------------------------------------------------------
-PS C:\Users\sparda\Documents\power shell> C:\Users\sparda\Documents\power shell\copyfromext.ps1
-
-
-    Directory: C:\Users\Sparda\Documents\loot
-
-
-Mode                LastWriteTime         Length Name                                                                                                                                                       
-----                -------------         ------ ----                                                                                                                                                       
-d-----        3/30/2020   8:07 PM                20200330                                                                                                                                                   
+#find external items device and copy desired data 
+Get-ChildItem -Path "$mydrive" -Include .\"*.jpg" | Copy-Item  -Destination $destinationFolder -verbose
