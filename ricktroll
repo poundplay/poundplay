@@ -1,0 +1,15 @@
+DELAY 2
+REM open run box
+GUI R 
+DELAY 1
+REM go to never gonna give you up 
+STRING https://www.youtube.com/watch?v=dQw4w9WgXcQ
+ENTER
+REM hide window so they cant see where its coming from 
+GUI 
+DELAY 1
+STRING adjust volume
+ENTER
+HOME
+GUI D
+EXIT
