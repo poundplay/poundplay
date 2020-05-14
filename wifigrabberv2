@@ -1,3 +1,9 @@
+REM Written and tested by Dante Sparda w ok_iot
+REM this took a lot of digging and research. please use responsibly. 
+REM i wrote this on a wim but of course you can filter whatever you want to the loot folder 
+REM https://www.mathewjbray.com/powershell/powershell-get-drive-letters-by-volume-name-and-execute-robocopy/
+
+
 DELAY 1000
 GUI R 
 DELAY 1000
