@@ -1,6 +1,7 @@
 REM this is a basic wifi dump. it takes whatever you name your usb ducky with twin ducky firmware and copies the files to it
 REM this is used with the USB Rubber Ducky at Hak5. 
 REM written by Dante Sparda aka ok_iot aka poundplay
+REM please check the links for the firmware that others made and its useful capabilities and thanks to those who have worked so hard
 REM enjoy
 
 REM open powershell as hidden
