@@ -23,5 +23,5 @@ STRING move-item -path C:\t -Destination $destinationLetter
 ENTER
 STRING clear
 ENTER
-EXIT
+STRING EXIT
 ENTER
